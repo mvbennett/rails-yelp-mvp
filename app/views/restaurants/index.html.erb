@@ -1,0 +1,3 @@
+<% @restaurants.each do |resto| %>
+  <%= link_to resto.name, restaurant_path(resto) %>
+<% end %>

@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+puts "seeding"
+
+5.times do
+  resto = Restaurant.new(name: Faker::Hipster.word, address: Faker::Address.street_address, category: ["chinese", "italian", "japanese", "french", "belgian"][rand(0..4)])
+  resto.save
+end
+
+puts "seeded"
