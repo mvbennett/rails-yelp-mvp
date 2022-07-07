@@ -14,4 +14,14 @@
     </li>
   <% end %>
 </ul>
-<% @restaurant.reviews.each %>
+<h2>
+  Reviews
+</h2>
+<ul>
+<% @restaurant.reviews.each do |review| %>
+  <li>
+    <%= review.rating %>/5
+    <%= review.content %>
+  </li>
+<% end %>
+</ul>
